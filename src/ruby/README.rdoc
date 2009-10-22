@@ -1,0 +1,30 @@
+= john-wordnik
+
+A simple ruby wrapper of the Wordnik definitions API
+
+== Use:
+
+$ irb
+>> require 'wordnik'
+=> true
+
+>> cat_definitions = Wordnik.definitions("cat")
+[#<Definition:0x1016320e8 @dictionary="Century Dictionary", @pos=0, @full=nil, @summary="In medieval warfare...
+
+>> cat_definitions.first.summary
+=> "In medieval warfare, a machine resembling the pluteus, under the protection of which soldiers worked in sapping walls and fosses."
+
+>> cat_definitions.first.dictionary
+=> "Century Dictionary"
+
+>> cat_definitions.first.word
+=> "cat"
+
+>> cat_definitions[1].full
+=> "It is uncertain whether any animal now existing in a wild state is the ancestor of the domestic cat; probably it is descended from a cat originally domesticated in Egypt, though some regard the wildcat of Europe, <em>F. catus</em>, as the feral stock. The wildcat is much larger than the domestic cat, strong and ferocious, and very destructive to poultry, lambs, etc."
+
+
+
+== Copyright
+
+Copyright (c) 2009 John McGrath/Wordnik.com. See LICENSE for details.
