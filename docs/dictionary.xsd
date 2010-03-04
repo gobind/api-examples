@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="citation" type="citation"/>
+  <xs:element name="definition" type="definition"/>
+  <xs:element name="exampleUsage" type="exampleUsage"/>
+  <xs:element name="label" type="label"/>
+  <xs:element name="note" type="note"/>
+
+  <xs:complexType name="definition">
+    <xs:sequence>
+      <xs:element name="citations" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="citation" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="extendedText" type="xs:string" minOccurs="0"/>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+      <xs:element name="exampleUses" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="exampleUsage" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="headword" type="xs:string" minOccurs="0"/>
+      <xs:element name="labels" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="label" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="notes" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="note" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="partOfSpeech" type="xs:string" minOccurs="0"/>
+      <xs:element name="seqString" type="xs:string" minOccurs="0"/>
+      <xs:element name="source" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="sequence" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="citation">
+    <xs:sequence>
+      <xs:element name="cite" type="xs:string" minOccurs="0"/>
+      <xs:element name="source" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="exampleUsage">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="position" type="xs:int" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="label">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:long" use="required"/>
+    <xs:attribute name="parentId" type="xs:long" use="required"/>
+    <xs:attribute name="type" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="note">
+    <xs:sequence>
+      <xs:element name="appliesTo" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="pos" type="xs:int" use="required"/>
+    <xs:attribute name="noteType" type="xs:string"/>
+  </xs:complexType>
+</xs:schema>
+
