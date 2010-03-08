@@ -18,6 +18,7 @@ public abstract class AbstractExample {
 
 		if(Response.Status.OK.getStatusCode() != response.getStatus()){
 			System.out.println("invalid response from the server, HTTP status code was " + response.getStatus());
+			throw new Exception("failed to get api token status!  " + response.getEntity(String.class).toString());
 		}
 		ApiTokenStatus status = response.getEntity(ApiTokenStatus.class);
 		if(status.getRemainingCalls()==0){
