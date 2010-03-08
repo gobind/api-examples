@@ -15,8 +15,12 @@ This should produce the library "java-examples.jar" in your lib folder.
 
 To run the examples, use the script in the bin folder, which correctly adds jars in your lib folder to the classpath:
 
-./bin/runclass.sh com.wordnik.examples.WordDataExample {api_key} {word}
+./bin/run.sh com.wordnik.examples.WordDataExample {api_key} {word}
 
+For the word data demo:
 Replace {api_key} with your api key, and {word} with the wordstring you want to pass to the api.
+
+For the Word of the Day demo:
+./bin/run.sh com.wordnik.examples.WordOfTheDayDemo {api_key}
 
 If you have any questions, please see our blog at http://docs.wordnik.com/api, or email us at apiteam@wordnik.com.
