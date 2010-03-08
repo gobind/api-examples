@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="definition" type="wordOfTheDayDefinition"/>
+
+  <xs:element name="wordOfTheDayExample" type="wordOfTheDayExample"/>
+
+  <xs:element name="wotd" type="wordOfTheDay"/>
+
+  <xs:complexType name="wordOfTheDay">
+    <xs:sequence>
+      <xs:element ref="definition" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="example" type="wordOfTheDayExample" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="note" type="xs:string" minOccurs="0"/>
+      <xs:element name="wordstring" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:long" use="required"/>
+    <xs:attribute name="publishDate" type="xs:dateTime"/>
+  </xs:complexType>
+
+  <xs:complexType name="wordOfTheDayDefinition">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="wordOfTheDayExample">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

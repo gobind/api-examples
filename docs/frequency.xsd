@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="frequency" type="frequencyValue"/>
+
+  <xs:element name="frequencySummary" type="frequencySummary"/>
+
+  <xs:complexType name="frequencySummary">
+    <xs:sequence>
+      <xs:element ref="frequency" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="totalCount" type="xs:long"/>
+      <xs:element name="unknownYearCount" type="xs:int"/>
+      <xs:element name="wordId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="frequencyValue">
+    <xs:sequence>
+      <xs:element name="count" type="xs:long"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

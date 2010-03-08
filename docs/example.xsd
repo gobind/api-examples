@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="example" type="example"/>
+
+  <xs:complexType name="example">
+    <xs:sequence>
+      <xs:element name="display" type="xs:string" minOccurs="0"/>
+      <xs:element name="documentId" type="xs:long" minOccurs="0"/>
+      <xs:element name="exampleId" type="xs:long"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="rating" type="xs:int"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="url" type="xs:string" minOccurs="0"/>
+      <xs:element name="year" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
