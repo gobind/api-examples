@@ -7,9 +7,9 @@
     <dependencies defaultconfmapping="*->default">
 		<!-- jersey dependencies -->
         <dependency org="javax.ws.rs" name="jsr311-api" rev="1.1" conf="*"/>
-        <dependency org="com.sun.jersey" name="jersey-json" rev="1.1.2-ea" conf="*"/>
-        <dependency org="com.sun.jersey" name="jersey-client" rev="1.1.2-ea" conf="*"/>
-        <dependency org="com.sun.jersey" name="jersey-core" rev="1.1.2-ea" conf="*"/>
+        <dependency org="com.sun.jersey" name="jersey-json" rev="1.1.5" conf="*"/>
+        <dependency org="com.sun.jersey" name="jersey-client" rev="1.1.5" conf="*"/>
+        <dependency org="com.sun.jersey" name="jersey-core" rev="1.1.5" conf="*"/>
 		
     </dependencies>
 </ivy-module>
