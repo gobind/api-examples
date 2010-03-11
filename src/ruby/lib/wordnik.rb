@@ -1,81 +1,57 @@
-require 'net/http'
-require 'uri'
-require 'hpricot'
-require 'json'
+require 'httparty'
+require 'word'
 require 'definition'
 require 'example'
 
-# Ruby wrapper to access Wordnik definitions API.
+# Ruby wrapper to access Wordnik definitions API. Has dependency on HTTParty gem.
+# No exception handling or other niceties. Intended as an API demo, not meant for production use
 class Wordnik
-
-# move to config file
-API_BASE_URL = 'http://api.wordnik.com/api'
-API_KEY = 'INTERNAL_ALPHA_TEST'
-
-# add:
-# - spelling suggestions (did you mean)
-# - wotd
-# - corpus frequency
-# - autosuggest (like autocomplete on site)
-
-  private
+  include HTTParty
+  base_uri 'http://api.wordnik.com/api'
+  headers 'Content-Type' => 'application/json'
   
-  # gets raw parsed json
-  def self.get_raw_data(url)
-    req = Net::HTTP::Get.new(url.to_s)
-    res = Net::HTTP.start(url.host, url.port) { |http| http.request(req) }
-    JSON.parse(res.body)
-  end
-  
-  public
+  API_KEY = 'your_api_key_here'
 
-  # get an array of examples sentences for a word, as strings
+  # get an array of Example objects for a word
   def self.examples(word)
-    begin
-      
-      # TODO: send key via headers, not querystring
-      url = URI.parse( "#{API_BASE_URL}/word.json/#{word}/examples?api_key=#{API_KEY}" )
-      result = get_raw_data(url)
-      raise 'Wordnik API error' if result.is_a?(Hash) && result.has_key?('Error')
-      
-      puts result.inspect
-      
-      examples = Array.new
-      result.each do |e|
-        puts 'creating an example, display is: ' + e['display'];
-        examples << Example.new(  :display => e['display'],
-                                  :rating => e['rating'],
-                                  :url => e['url'],
-                                  :title => e['title'] )
-      end
-      examples
-    rescue Exception => e
-      puts "Wordnik API error in examples: #{e}"
-      nil
+    raw_examples = self.get("/word.json/#{word}/examples", {:headers => {'api_key' => API_KEY}} )
+    
+    examples = Array.new
+    raw_examples.each do |example|
+      examples << Example.new(  :display => example['display'],
+                                :rating => example['rating'],
+                                :url => example['url'],
+                                :title => example['title'] )
     end
+    examples
   end
 
   # get an array of Definition objects for a word
   def self.definitions(word)
-    begin
-      
-      # TODO: send key via headers, not querystring
-      url = URI.parse( "#{API_BASE_URL}/word.json/#{word}/definitions?api_key=#{API_KEY}" )
-      result = get_raw_data(url)
-      raise 'Wordnik API error' if result.is_a?(Hash) && result.has_key?('Error')
+      raw_defs = self.get("/word.json/#{word}/definitions", {:headers => {'api_key' => API_KEY}} )
       
       definitions = Array.new
-      result.each do |d|
-        definitions << Definition.new( :word => d['headword'],
-                                       :dictionary => 'Century Dictionary',
-                                       :summary => d['defTxtSummary'],
-                                       :full => d['defTxtExtended'],
-                                       :pos => d['pos'] )
+      raw_defs.each do |definition|
+        definitions << Definition.new( :word => definition['headword'],
+                                       :text => definition['text'],
+                                       :extended_text => definition['extendedText'],
+                                       :part_of_speech => definition['partOfSpeech'] )
       end
       definitions
-    rescue Exception => e
-      puts "Wordnik API error in definitions: #{e}"
-      nil
-    end
+  end
+  
+  # given a wordstring, get an array of related words
+  def self.related(word)
+      raw_related = self.get("/word.json/#{word}/related", {:headers => {'api_key' => API_KEY}} )
+      
+      words = Array.new
+      raw_related.each do |type|
+        type['wordstrings'].each do |word|
+          words << Word.new( :wordstring => word,
+                             :rel_type => type['relType'] )
+        end
+      end
+      
+      words
   end
 end
