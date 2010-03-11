@@ -1,13 +1,12 @@
 class Definition
   
-  attr_accessor :word, :dictionary, :summary, :full, :pos
+  attr_accessor :headword, :text, :extended_text, :part_of_speech
   
   def initialize(options={})
-    @dictionary = options[:dictionary]
-    @word = options[:word]
-    @summary = options[:summary]
-    @full = options[:full]
-    @pos = options[:pos]
+    @headword = options[:headword]
+    @text = options[:text]
+    @extended_text = options[:extended_text]
+    @part_of_speech = options[:part_of_speech]
   end
   
 end
