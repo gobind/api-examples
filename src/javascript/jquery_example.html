@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
+		<script type='text/javascript'>
+
+var WORDNIK = new function() {
+	var API_KEY = "YOUR_API_KEY";
+	function api_definitions_url(word) {
+		return ("http://api.wordnik.com/api/word.json/"+encodeURIComponent(word)+"/definitions?callback=?&api_key="+API_KEY);
+	}
+	function getSelectedText(){ 
+		if(window.getSelection){ var selected = window.getSelection().toString(); } 
+		else if(document.getSelection){ var selected = document.getSelection(); } 
+		else if(document.selection){ var selected = document.selection.createRange().text; } 
+		return $.trim(selected);
+	} 
+	function lookup_word(the_word) {
+		$('#definitions').html('');
+    if (API_KEY=='YOUR_API_KEY') {
+      var warning = "<div class='warning'><p style='font-weight:bold'>Missing API key!</p>"
+      warning += "<p>Edit this source of this file and replace \"YOUR_API_KEY\" with your Wordnik API key.</p>";
+      warning += "<p>If you don't have an API key yet, sign up <a href='http://api.wordnik.com/signup/'>here</a></p>.</div>";
+      $('#definitions').html(warning);
+      return false;
+    }
+		$('#loading').show();
+		var url = api_definitions_url(the_word);
+		$.getJSON(url, function(response){
+			var the_html = "<h2>Definitions for <span>"+the_word+"</span></h2>";
+			the_html += "<ul>";
+			if (response.length>0) {
+				$.each(response, function(i, definition) {
+					if (definition.text) { 
+						the_html += "<li>"+definition.text+"</li>" 
+					};
+				});
+			} else {
+			the_html += "<li><em>No definitions!  Try a different word.</em></li>";
+			}
+			the_html += "</ul>";
+			$('#definitions').html(the_html);
+			$('#loading').hide();
+		});
+	}
+	$(window).dblclick(function(e) {
+		lookup_word(getSelectedText());
+	});
+}
+
+		</script>
+		<style type="text/css">
+			body {
+				font-family: verdana, helvetica, arial, sans-serif;
+				background: url(metal.jpg) repeat;
+			}
+			#container {
+				background: #fff;
+				border: 1px solid #666;
+				border-width: 1px 2px 2px 1px;
+				width: 80%;
+				margin: 20px auto;
+				padding: 15px;
+				font-size: 14px;
+				line-height: 20px;
+				-moz-border-radius: 10px;
+				-webkit-border-radius: 10px;
+			}
+			#cat {
+				border-bottom: 1px solid #999;
+				color: #111;
+				padding: 15px 0;
+				background: #fff;
+			}
+			#cat img {
+				border: 1px solid #999;
+				float: right;
+				margin: 0 10px;
+				width: 150px;
+			}
+			body, h2 {
+				margin: 0; padding: 0;
+			}
+			h2#instructions {
+				border-bottom: 1px solid #999;
+				padding: 0 0 15px;
+			}
+			#loading {
+				font-weight: bold;
+			}
+			#loading img {
+				vertical-align: text-bottom;
+				margin: 0 5px;
+			}
+			#loading, #definitions {
+				padding: 15px 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<h2 id="instructions">Instructions: <span style="font-weight:normal">Double-click a word to look up its definition.</span></h2>
+			<div id="cat">
+				<img src="kitten.jpg" />
+				The cat (Felis catus), also known as the domestic cat or housecat[5] to distinguish it from other felines and felids, is a small domesticated carnivorous mammal that is valued by humans for its companionship and its ability to hunt vermin and household pests. Cats have been associated with humans for at least 9,500 years,[6] and are currently the most popular pet in the world.[7] Due to their close association with humans, cats are now found almost everywhere on Earth. This extreme adaptability and their worrying impacts on native animals has led to them being classed as an invasive species. Most of these problems are caused by the large number of feral cats worldwide, with a population of up to 60 million of these animals in the United States alone.
+			</div>
+			<div id="loading" style="display:none">Loading data from Wordnik...<img src="loader.gif" /></div>
+			<div id="definitions"></div>
+		</div>
+	</body>
+</html>
