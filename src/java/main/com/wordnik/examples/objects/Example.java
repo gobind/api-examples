@@ -26,8 +26,9 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="display" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="documentId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="exampleId" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="rating" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="scoreId" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="provider" type="{}contentProvider" minOccurs="0"/>
+ *         &lt;element name="rating" type="{http://www.w3.org/2001/XMLSchema}float"/>
  *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="url" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="year" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
@@ -44,7 +45,8 @@ import javax.xml.bind.annotation.XmlType;
     "display",
     "documentId",
     "exampleId",
-    "id",
+    "scoreId",
+    "provider",
     "rating",
     "title",
     "url",
@@ -55,8 +57,9 @@ public class Example {
     protected String display;
     protected Long documentId;
     protected long exampleId;
-    protected long id;
-    protected int rating;
+    protected long scoreId;
+    protected ContentProvider provider;
+    protected float rating;
     protected String title;
     protected String url;
     protected Integer year;
@@ -126,26 +129,50 @@ public class Example {
     }
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the scoreId property.
      * 
      */
-    public long getId() {
-        return id;
+    public long getScoreId() {
+        return scoreId;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the scoreId property.
      * 
      */
-    public void setId(long value) {
-        this.id = value;
+    public void setScoreId(long value) {
+        this.scoreId = value;
+    }
+
+    /**
+     * Gets the value of the provider property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ContentProvider }
+     *     
+     */
+    public ContentProvider getProvider() {
+        return provider;
+    }
+
+    /**
+     * Sets the value of the provider property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ContentProvider }
+     *     
+     */
+    public void setProvider(ContentProvider value) {
+        this.provider = value;
     }
 
     /**
      * Gets the value of the rating property.
      * 
      */
-    public int getRating() {
+    public float getRating() {
         return rating;
     }
 
@@ -153,7 +180,7 @@ public class Example {
      * Sets the value of the rating property.
      * 
      */
-    public void setRating(int value) {
+    public void setRating(float value) {
         this.rating = value;
     }
 
