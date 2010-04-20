@@ -34,6 +34,7 @@ public class WordDataExample extends AbstractExample {
 			t.fetchFrequency(wordstring);
 			t.fetchDefinitions(wordstring);
 			t.fetchRelatedWords(wordstring);
+			t.fetchPhrases(wordstring);
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -91,7 +92,7 @@ public class WordDataExample extends AbstractExample {
 		List<Example> examples = client.resource("http://api.wordnik.com/api/word.xml/" + URLEncoder.encode(wordstring, "utf8") + "/examples").header("api_key", API_KEY).get(genericType);
 		
 		for(Example example : examples){
-			System.out.println("example: " + example.getDisplay());
+			System.out.println("example (" + example.getProvider().getName() + "): " + example.getDisplay());
 		}
 	}
 	
@@ -110,6 +111,15 @@ public class WordDataExample extends AbstractExample {
 			for(String word : relatedWord.getWordstrings().getWordstring()){
 				System.out.println("\t"+word);
 			}
+		}
+	}
+	
+	void fetchPhrases(String wordstring) throws Exception {
+		GenericType<List<Bigram>> genericType = new GenericType<List<Bigram>>() {}; 
+		List<Bigram> phrases = client.resource("http://api.wordnik.com/api/word.xml/" + URLEncoder.encode(wordstring, "utf8") + "/phrases").header("api_key", API_KEY).get(genericType);
+		
+		for(Bigram phrase : phrases){
+			System.out.println("phrase: " + phrase.getGram1() + " " + phrase.getGram2());
 		}
 	}
 	
