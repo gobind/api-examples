@@ -8,7 +8,6 @@ var WORDNIK = new function() {
   var API_BASE_URL = "http://api.wordnik.com/api/";
 	var DEFAULT_API_KEY = "YOUR_API_KEY";
 	var API_KEY = DEFAULT_API_KEY;
-	var API_KEY = "85b993ddaabe04346e0090d379b02d18ad04bda75d4e0ecca";
 
   /* WORDNIK DEFINITION LOOKUP with jQuery
    * for Wordnik definitions documentation, visit http://docs.wordnik.com/api/methods#defs
@@ -199,6 +198,11 @@ var WORDNIK = new function() {
 	</head>
 	<body>
     <div id="container">
+          <div id="no_key" class='notice' style='display:none'>
+            <h3>Invalid API key!</h3>
+            <p>Edit the source of this file and replace "YOUR_API_KEY" with your Wordnik API key.</p>
+            <p>If you don't have a Wordnik API key yet, sign up <a href='http://api.wordnik.com/signup/'>here</a>.</p>
+          </div>
       <h1 id="the_title">Wordnik API examples with Javascript and jQuery</h1>
       <div class="whitebox">
         <h1>Autocomplete</h1>
@@ -213,13 +217,7 @@ var WORDNIK = new function() {
           The cat (Felis catus), also known as the domestic cat or housecat[5] to distinguish it from other felines and felids, is a small domesticated carnivorous mammal that is valued by humans for its companionship and its ability to hunt vermin and household pests. Cats have been associated with humans for at least 9,500 years,[6] and are currently the most popular pet in the world.[7] Due to their close association with humans, cats are now found almost everywhere on Earth. This extreme adaptability and their worrying impacts on native animals has led to them being classed as an invasive species. Most of these problems are caused by the large number of feral cats worldwide, with a population of up to 60 million of these animals in the United States alone.
         </div>
         <div id="loading" style="display:none">Loading data from Wordnik...<img src="loader.gif" /></div>
-        <div id="definitions">
-          <div id="no_key" class='notice' style='display:none'>
-            <h3>Invalid API key!</h3>
-            <p>Edit the source of this file and replace "YOUR_API_KEY" with your Wordnik API key.</p>
-            <p>If you don't have a Wordnik API key yet, sign up <a href='http://api.wordnik.com/signup/'>here</a>.</p>
-          </div>
-        </div>
+        <div id="definitions"> </div>
         <p class="docs">Learn more about the definitions API: <a href="http://docs.wordnik.com/api/methods#defs" target="_blank">http://docs.wordnik.com/api/methods#defs</a></p>
       </div>
     </div>
