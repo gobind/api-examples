@@ -271,7 +271,7 @@ class Wordnik(object):
         request_uri = "/api/wordoftheday.%s" % (self.format, )
         return self._make_request(request_uri)
 
-    def random_word(self):
+    def random_word(self, has_definition=False):
         """Fetch a random word from the Alpha Corpus.
 
         >>> import wordnik
@@ -281,7 +281,7 @@ class Wordnik(object):
         {'word': 'smatch', 'id': 96660}
         >>>
         """
-        request_uri = "/api/words.%s/randomWord" % (self.format, )
+        request_uri = "/api/words.%s/randomWord?hasDictionaryDef=%s" % (self.format, has_definition, )
         return self._make_request(request_uri)
 
     def phrases(self, word, count=10):
@@ -318,13 +318,30 @@ class Wordnik(object):
           ...
           </words>
         """
-        pprint(type)
         all_types = [None, "synonym", "antonym", "form", "equivalent", "hyponym", "variant"]
         if type in all_types:
             request_uri = "/api/word.%s/%s/related?type=%s" % (self.format, word, type, )
             return self._make_request(request_uri)
         else:
             raise InvalidRelationType()
+
+    def punctuation(self, word):
+        """Fetch a word's punctuation factor.
+
+          Sample Response:
+            <punctuationFactor>
+               <exclamationPointCount>9486</exclamationPointCount>
+               <periodCount>12454</periodCount>
+               <questionMarkCount>52</questionMarkCount>
+               <totalCount>39832</totalCount>
+               <wordId>567925</wordId>
+            </punctuationFactor>
+        """
+        request_uri = "/api/word.%s/%s/punctuationFactor" % (self.format, word, )
+        return self._make_request(request_uri)
+
+
+      
 
 def main(args):
 
