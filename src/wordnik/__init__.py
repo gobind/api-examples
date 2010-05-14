@@ -20,6 +20,9 @@ from pprint import pprint
 class RestfullError(Exception):
     pass
 
+class InvalidRelationType(Exception):
+    pass
+
 class Definition(object):
 
     @classmethod
@@ -69,6 +72,7 @@ class Wordnik(object):
         con.request("GET", request_uri, headers=headers)
         result = con.getresponse()
         result_string = result.read()
+        pprint(result_string)
         if self.format == Wordnik.FORMAT_JSON:
             retval = json.loads(result_string)
         elif self.format == Wordnik.FORMAT_XML:
@@ -280,6 +284,47 @@ class Wordnik(object):
         request_uri = "/api/words.%s/randomWord" % (self.format, )
         return self._make_request(request_uri)
 
+    def phrases(self, word, count=10):
+        """Fetch bi-gram phrases containing a word.
+
+        Sample Response:
+
+          <bigrams>
+             <bigram>
+                <mi>12.414364902158674</mi>
+                <wlmi>20.877889275429855</wlmi>
+                <gram1>Christmas</gram1>
+                <gram2>Eve</gram2>
+             </bigram>
+          </bigrams>
+        """
+        request_uri = "/api/word.%s/%s/phrases?count=%s" % (self.format, word, count, )
+        return self._make_request(request_uri)
+
+    def related(self, word, type=None):
+        """Fetch related words for this word
+
+        Sample Response:
+
+          <words>
+             <word>
+                <id>18773</count>
+                <wordstring>simpleton</year>
+             </word>
+             < word>
+                <id>23742</id>
+                <wordstring>boor</wordstring>
+             </word>
+          ...
+          </words>
+        """
+        pprint(type)
+        all_types = [None, "synonym", "antonym", "form", "equivalent", "hyponym", "variant"]
+        if type in all_types:
+            request_uri = "/api/word.%s/%s/related?type=%s" % (self.format, word, type, )
+            return self._make_request(request_uri)
+        else:
+            raise InvalidRelationType()
 
 def main(args):
 
