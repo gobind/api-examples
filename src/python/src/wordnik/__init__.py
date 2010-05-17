@@ -317,7 +317,12 @@ def main(args):
                                "frequency",
                                "examples",
                                "suggest",
-                               "word_of_the_day", ),
+                               "word_of_the_day", 
+                               "random_word",
+                               "phrases",
+                               "related",
+                               "punctuation",
+                               ),
                       action="store",
                       metavar="CHOICE"
                       )
@@ -332,7 +337,7 @@ def main(args):
     except (NameError, ), error:
         print error
     for arg in args:
-        pprint(wordnik.word(arg))
+        pprint(getattr(wordnik, options.choice)(arg))
 
 if __name__ == "__main__":
     main(sys.argv)
