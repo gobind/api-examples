@@ -306,9 +306,6 @@ class Wordnik(object):
         request_uri = "/api/word.%s/%s/punctuationFactor" % (self.format, word, )
         return self._make_request(request_uri)
 
-
-      
-
 def main(args):
 
     parser = OptionParser()
@@ -336,39 +333,6 @@ def main(args):
         print error
     for arg in args:
         pprint(wordnik.word(arg))
-
-class CmdInterface(cmd.Cmd):
-
-    prompt = "wordnik: "
-
-    def do_api(self, api_key):
-        self.wordnik = Wordnik(api_key=api_key)
-
-    def do_word(self, word):
-        print self.wordnik.word(word)
-
-    def do_definitions(self, word):
-        print self.wordnik.definitions(word)
-
-    def do_frequency(self, word):
-        print self.wordnik.frequency(word)
-
-    def do_examples(self, word):
-        print self.wordnik.examples(word)
-
-    def do_suggest(self, word):
-        print self.wordnik.suggest(word)
-
-    def do_wordoftheday(self, word):
-        print self.wordnik.word_of_the_day()
-
-    def do_random(self):
-        print self.wordnik.random_word()
-
-    def do_EOF(self, line):
-        """Exit the command line utility"""
-        print
-        return True
 
 if __name__ == "__main__":
     main(sys.argv)
