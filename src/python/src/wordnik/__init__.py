@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Thin wrapper around the restfull API from wordnik.com
+"""Thin wrapper around the restful API from wordnik.com
 
 This currently module presents a thin wrapper around the wordnik API.
 """
@@ -17,7 +17,7 @@ from optparse import OptionParser
 from xml.etree import ElementTree
 from pprint import pprint
 
-class RestfullError(Exception):
+class RestfulError(Exception):
     pass
 
 class InvalidRelationType(Exception):
@@ -45,9 +45,9 @@ class Wordnik(object):
             retval = ElementTree.fromstring(result_string)
         if result.status != httplib.OK:
             try:
-                raise RestfullError(retval["message"])
+                raise RestfulError(retval["message"])
             except (TypeError, ), error:
-                raise RestfullError(retval.find("message").text)
+                raise RestfulError(retval.find("message").text)
         return retval
 
     def word(self, word):
