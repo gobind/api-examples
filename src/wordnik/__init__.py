@@ -23,39 +23,6 @@ class RestfullError(Exception):
 class InvalidRelationType(Exception):
     pass
 
-class Definition(object):
-
-    @classmethod
-    def json_loads(cls, json_string):
-        s = json.loads(json_string)
-        return cls.from_dict(s)
-
-    @classmethod
-    def from_dict(cls, dict_):
-        return cls(header_id = dict_.get(u"@headerId", None),
-                   id_ = dict_.get(u"@id", None),
-                   def_txt_summary = dict_.get(u"defTxtSummary", None),
-                   headword = dict_.get(u"headword", None),
-                   headword_id = dict_.get(u"headwordId", None),
-                   part_of_speech = dict_.get(u"partOfSpeech", None),
-                   pos = dict_.get(u"pos", None),
-                   )
-
-    def __init__(self, header_id, id_, def_txt_summary, headword, headword_id, part_of_speech, pos):
-        self.header_id = header_id
-        self.id_ = id_
-        self.def_txt_summary = def_txt_summary
-        self.headword = headword
-        self.headword_id = headword_id
-        self.part_of_speech = part_of_speech
-        self. pos = pos
-
-    def __repr__(self):
-        return u"<%s: %s>" % (self.__class__, self.headword, )
-
-    def __str__(self):
-        return u"%s: %s" % (self.headword, self.def_txt_summary, )
-
 class Wordnik(object):
 
     FORMAT_JSON = "json"
@@ -72,7 +39,6 @@ class Wordnik(object):
         con.request("GET", request_uri, headers=headers)
         result = con.getresponse()
         result_string = result.read()
-        pprint(result_string)
         if self.format == Wordnik.FORMAT_JSON:
             retval = json.loads(result_string)
         elif self.format == Wordnik.FORMAT_XML:
