@@ -11,6 +11,7 @@ import com.wordnik.examples.objects.AuthenticationToken;
 import com.wordnik.examples.objects.WordList;
 import com.wordnik.examples.objects.WordListType;
 import com.wordnik.examples.objects.StringValue;
+import com.wordnik.examples.objects.WordListWord;
 
 public class WordListExample extends AbstractExample {
 	private static String USER_NAME = null;
@@ -109,10 +110,25 @@ public class WordListExample extends AbstractExample {
 			str.setWordstring(wordsToAdd);
 			words.add(str);
 		}
+		
+		//	add a word which we'll remove later
+		StringValue str = new StringValue();
+		str.setWordstring("yuck");
+		words.add(str);
 
 		client.resource("https://api.wordnik.com/api/wordList.xml/" + URLEncoder.encode(list.getPermalinkId(), "utf8") + "/words").type(MediaType.APPLICATION_XML).header("api_key", API_KEY).header("auth_token", TOKEN.getToken()).post(words.toArray(new StringValue[words.size()]));
 		System.out.println("added " + words.size() + " word(s)");
 
+		//	get all the words in the list we just created
+		WordListWord[] wordsInList = client.resource("https://api.wordnik.com/api/wordList.xml/" + URLEncoder.encode(list.getPermalinkId(), "utf8") + "/words").type(MediaType.APPLICATION_XML).header("api_key", API_KEY).header("auth_token", TOKEN.getToken()).get(WordListWord[].class);
+		System.out.println("found " + wordsInList.length + " words in list");
+
+		//	remove the word "yuck" from the list
+        client.resource("https://api.wordnik.com/api/wordList.xml/" + list.getPermalinkId() + "/deleteWords").header("api_key", API_KEY).header("auth_token", TOKEN.getToken()).post(new StringValue[]{str});
+        
+        //	uncomment to delete the list you just created
+//        client.resource("https://api.wordnik.com/api/wordList.xml/" + list.getPermalinkId()).header("api_key", API_KEY).header("auth_token", TOKEN.getToken()).delete();
+        
 		return list.getPermalinkId();
 	}
 
