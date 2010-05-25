@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="wordListWord" type="wordListWord"/>
+
+  <xs:complexType name="wordListWord">
+    <xs:sequence>
+      <xs:element name="createdAt" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="numberCommentsOnWord" type="xs:long"/>
+      <xs:element name="numberLists" type="xs:long"/>
+      <xs:element name="userId" type="xs:long"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+      <xs:element name="wordstring" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
