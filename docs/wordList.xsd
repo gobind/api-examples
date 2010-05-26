@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="wordList" type="wordList"/>
+
+  <xs:complexType name="wordList">
+    <xs:sequence>
+      <xs:element name="createdAt" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:long"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="numberWordsInList" type="xs:long"/>
+      <xs:element name="permalinkId" type="xs:string" minOccurs="0"/>
+      <xs:element name="type" type="wordListType" minOccurs="0"/>
+      <xs:element name="updatedAt" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="userId" type="xs:long"/>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="wordListType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRIVATE"/>
+      <xs:enumeration value="PUBLIC"/>
+      <xs:enumeration value="SYSTEM"/>
+      <xs:enumeration value="INVITE_ONLY"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

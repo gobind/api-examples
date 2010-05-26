@@ -4,6 +4,7 @@ import javax.ws.rs.core.Response;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.filter.LoggingFilter;
 import com.wordnik.examples.objects.ApiTokenStatus;
 
 public abstract class AbstractExample {
@@ -14,7 +15,11 @@ public abstract class AbstractExample {
 		client = new Client();
 
 		//	check to make sure this key is valid
-		ClientResponse response = client.resource("http://api.wordnik.com/api/account.xml/apiTokenStatus/").header("api_key", API_KEY).get(ClientResponse.class);
+		ClientResponse response = client.resource("https://api.wordnik.com/api/account.xml/apiTokenStatus/").header("api_key", API_KEY).get(ClientResponse.class);
+		if(System.getProperty("WORDNIK_DEBUG") != null){
+			//	add a logger filter to see all messages
+			client.addFilter(new LoggingFilter());
+		}
 
 		if(Response.Status.OK.getStatusCode() != response.getStatus()){
 			System.out.println("invalid response from the server, HTTP status code was " + response.getStatus());

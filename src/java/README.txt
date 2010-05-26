@@ -13,7 +13,7 @@ ant build
 
 This should produce the library "java-examples.jar" in your lib folder.
 
-To run the examples, use the script in the bin folder, which correctly adds jars in your lib folder to the classpath:
+To run the examples, use the script in the bin folder, which correctly adds jars in your lib folder to the classpath (hint: if you want to enable logging of all messages to stdio, please set -DWORDNIK_DEBUG in the bin/run.sh):
 
 ./bin/run.sh com.wordnik.examples.WordDataExample {api_key} {word}
 
@@ -23,4 +23,18 @@ Replace {api_key} with your api key, and {word} with the wordstring you want to 
 For the Word of the Day demo:
 ./bin/run.sh com.wordnik.examples.WordOfTheDayDemo {api_key}
 
-If you have any questions, please see our blog at http://docs.wordnik.com/api, or email us at apiteam@wordnik.com.
+The Word List Demo requires authentication.  It will create a list named {list_name} with the words {words}.  For
+words, you can comma-separate words as such: "great, neat, good fun, fantastic"
+For the Word List Demo:
+./bin/run.sh com.wordnik.examples.WordListExample {api_key} {user_name} {password} {list_name} {words}
+
+If you have any questions, please see the following resources:
+
+Our Google Group:
+http://groups.google.com/group/wordnik-api/ 
+
+Our docs page:
+http://docs.wordnik.com/api
+
+Old-fashioned Email:
+apiteam@wordnik.com.
