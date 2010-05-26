@@ -1,30 +1,74 @@
-= john-wordnik
+This is a simple Ruby wrapper of the Wordnik API.
+Note: it does *not* include all API methods!
 
-A simple ruby wrapper of the Wordnik definitions API
+Documentation: http://docs.wordnik.com/api/methods
+API Key Signup: http://api.wordnik.com/signup/
+Support: http://groups.google.com/group/wordnik-api
 
-== Use:
+== Example Usage:
 
 $ irb
 >> require 'wordnik'
 => true
 
->> cat_definitions = Wordnik.definitions("cat")
-[#<Definition:0x1016320e8 @dictionary="Century Dictionary", @pos=0, @full=nil, @summary="In medieval warfare...
+# first, initialize your API client with your api_key and (optionally) your username and password
+# note: if you don't supply a username/password, you won't be able to access all of the api methods
+>> wordnik=Wordnik.new({:api_key=>'your_api_key'})
+=> #<Wordnik:0x110e964 @api_key="your_api_key">
+>> wordnik.authenticated?
+=> false
 
->> cat_definitions.first.summary
-=> "In medieval warfare, a machine resembling the pluteus, under the protection of which soldiers worked in sapping walls and fosses."
+# optionally, you can also pass in your username and password when you initialize.
+# this will allow you to access all api methods, including writing to the Wordnik database
+>> wordnik=Wordnik.new({:api_key=>'your_api_key', :username=>'your_username', :password=>'your_password'})
+=> #<Wordnik:0x110e964 @api_key="your_api_key", @auth_token=>"temporary_auth_token", @user_id=>12345>
+>> wordnik.authenticated?
+=> true
 
->> cat_definitions.first.dictionary
-=> "Century Dictionary"
+# find a word
+>> cat = Word.find('cat')
+=> #<Word:0x601a30 @id=27568, @rel_type=nil, @wordstring="cat">
 
->> cat_definitions.first.word
-=> "cat"
+# get that word's definitions
+>> cat_definitions = cat.definitions
+=> [#<Definition:0x583fb8 @part_of_speech="noun", @text="Any animal belonging to the natural family Felidae, ... ]
 
->> cat_definitions[1].full
-=> "It is uncertain whether any animal now existing in a wild state is the ancestor of the domestic cat; probably it is descended from a cat originally domesticated in Egypt, though some regard the wildcat of Europe, <em>F. catus</em>, as the feral stock. The wildcat is much larger than the domestic cat, strong and ferocious, and very destructive to poultry, lambs, etc."
+# get that word's example sentences
+>> cat_examples = cat.examples
+=> [#<Example:0x5499e4 @url=nil, @rating=755.66016, @year=1992, @display="That mountain cat is a very confused young hunter, ...]
 
+# get that word's related words
+>> cat_related = cat.related
+=> {"synonym"=>[#<Word:0x35a0fc @id=nil, @rel_type="synonym", @wordstring="kitten">, #<Word:0x358bd0 @id=nil, @rel_type="synonym", @wordstring="catamaran">, ...], ...}
 
+# retrieve all of the authenticated user's public lists
+>> wordnik.lists
+=> [#<List:0x12e4f54 @word_count=0, @id=25594, @permalink_id="test-list--2", @created_at="2010-05-26T23:28:56.342+0000", @user_name="altay", @updated_at="2010-05-26T23:28:56.342+0000", @description="just a test", @name="test list", @user_id=1026985, @type="PUBLIC">]
+
+# create a public list for the authenticated user
+>> animal_list = wordnik.create_list('animals', 'my favorite animals')
+=> #<List:0x129a990 @word_count=0, @id=25593, @permalink_id="animals--2", @created_at="2010-05-26T23:28:28.000+0000", @user_name="altay", @updated_at="2010-05-26T23:28:28.000+0000", @description="my favorite animals", @name="animals", @user_id=1026985, @type="PUBLIC">
+
+# see the words in a list
+>> animal_list.words
+=> []   # no words yet!
+
+# add a word to this list
+>> animal_list.add_word('dog')
+=> [{"userName"=>"altay", "numberLists"=>65, "numberCommentsOnWord"=>19, "userId"=>1026985, "createdAt"=>"2010-05-26T23:31:49.000+0000", "wordstring"=>"dog"}]
+
+# add another word to this list
+>> animal_list.add_word('carrot')
+=> [{"userName"=>"altay", "numberLists"=>28, "numberCommentsOnWord"=>0, "userId"=>1026985, "createdAt"=>"2010-05-26T23:33:20.000+0000", "wordstring"=>"carrot"}, {"userName"=>"altay", "numberLists"=>65, "numberCommentsOnWord"=>19, "userId"=>1026985, "createdAt"=>"2010-05-26T23:31:49.000+0000", "wordstring"=>"dog"}]
+
+# fooled you!  a carrot is not an animal. let's remove that word from animal_list.
+>> animal_list.remove_word('carrot')
+=> [{"userName"=>"altay", "numberLists"=>65, "numberCommentsOnWord"=>19, "userId"=>1026985, "createdAt"=>"2010-05-26T23:31:49.000+0000", "wordstring"=>"dog"}]
+
+# i'm sick of collecting animals. let's destroy this list.
+>> animal_list.destroy
+=> nil
 
 == Copyright
 
-Copyright (c) 2009 John McGrath/Wordnik.com. See LICENSE for details.
+Copyright (c) 2009 John McGrath/Altay Guvench/Wordnik.com. See LICENSE for details.
