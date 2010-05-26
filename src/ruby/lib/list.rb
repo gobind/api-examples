@@ -23,8 +23,8 @@ class List
     return Wordnik.client
   end
   
-  # create a new list. first argument is an instance of the Wordnik class.
-  def self.create(name, description)
+  # create a new list.  you must give it a name.  description is optional.
+  def self.create(name, description=nil)
     Wordnik.client.ensure_authentic
     body = {'name'=>name, 'description'=>description, :type=>'PUBLIC' }
     response = Wordnik.post("/wordLists.json", {:body=>body.to_json, :headers=>Wordnik.client.api_headers} )
