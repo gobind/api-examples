@@ -7,7 +7,9 @@ The build file uses ivy to download dependencies.  If you don't have ivy install
 
 ant install.ivy
 
-This should download ivy and install it on your local machine, so the build script has access to it.  The general build is started by running this command:
+This should download ivy and install it on your local machine, so the build script has access to it.  If ant fails to copy the ivy jar to your ant installation, you can manually download ivy from http://ant.apache.org/ivy/.  The jar should be copied to $ANT_HOME/lib.
+
+The general build is started by running this command:
 
 ant build
 
