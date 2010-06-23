@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Hello, Dictionary!</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello, Dictionary!</h3>
+      <h3>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], "/wordnik?word_search=#{@wotd['wordstring']}") %></strong>!
+      </h3>
+      <p>
+        <% form_tag('/wordnik', :method=>'get') do -%>
+          Look up a word: 
+          <%= text_field_tag('word_search') %>
+          <%= submit_tag('Search') %>
+          <%= submit_tag("I'm Feeling Wordie") %>
+        <% end %>
+      </p>
+    </div>
+    <%= yield %>
+    <hr />
+    <div>
+      <p>Hello Dictionary was built with the <%= link_to("Wordnik API", "http://wordnik.com/developers") %>.</p>
+      <p><strong>Documentation</strong>: <%= link_to("http://docs.wordnik.com/api/methods", "http://docs.wordnik.com/api/methods") %></p>
+      <p><strong>API Key Signup</strong>: <%= link_to("http://api.wordnik.com/signup/", "http://api.wordnik.com/signup/") %></p>
+      <p><strong>Support</strong>: <%= link_to("http://groups.google.com/group/wordnik-api", "http://groups.google.com/group/wordnik-api") %></p>
+    </div>
+  </body>
+</html>

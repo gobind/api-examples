@@ -1,0 +1,1523 @@
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-06-21 16:06:56) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 102ms (View: 11, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-21 16:15:37) [GET]
+
+ActionController::RoutingError (No route matches "/wordnik" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-21 16:15:44) [GET]
+
+ActionController::RoutingError (No route matches "/wordnik/welcome" with {:method=>:get}):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing WordnikController#welcome (for 127.0.0.1 at 2010-06-21 16:16:47) [GET]
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/wordnik/welcome]
+
+
+Processing WordnikController#welcome (for 127.0.0.1 at 2010-06-21 16:17:09) [GET]
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/wordnik/welcome]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 16:27:52) [GET]
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 16:52:41) [GET]
+Completed in 52ms (View: 46, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 16:52:45) [GET]
+Completed in 7ms (View: 1, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 16:52:52) [GET]
+Rendering wordnik/index
+Completed in 79ms (View: 72, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:52:58) [POST]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.2ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (unprocessable_entity)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 16:54:15) [GET]
+Rendering wordnik/index
+Completed in 65ms (View: 11, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:54:19) [POST]
+  Parameters: {"commit"=>"Search", "authenticity_token"=>"cBfkDEyNvfmH74Jnvi6QY85dNX8dspMSsDV9R5P71TA=", "word_search"=>"hello"}
+
+ActionController::UnknownAction (No action responded to lookup. Actions: index):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:54:56) [GET]
+
+NameError (uninitialized constant WordnikController::Wordnik):
+  app/controllers/wordnik_controller.rb:9:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:55:53) [GET]
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/wordnik/lookup]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:56:11) [GET]
+
+InvalidApiKeyError (Missing api_key!):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:50:in `initialize'
+  app/controllers/wordnik_controller.rb:9:in `new'
+  app/controllers/wordnik_controller.rb:9:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.9ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:58:55) [GET]
+
+InvalidApiKeyError (Missing api_key!):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:50:in `initialize'
+  app/controllers/application_controller.rb:10:in `new'
+  app/controllers/application_controller.rb:10:in `initialize_wordnik'
+  app/controllers/wordnik_controller.rb:8:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (101.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:59:15) [GET]
+{:api_key=>nil}
+
+InvalidApiKeyError (Missing api_key!):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:50:in `initialize'
+  app/controllers/application_controller.rb:11:in `new'
+  app/controllers/application_controller.rb:11:in `initialize_wordnik'
+  app/controllers/wordnik_controller.rb:8:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (54.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:59:18) [GET]
+{:api_key=>nil}
+
+InvalidApiKeyError (Missing api_key!):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:50:in `initialize'
+  app/controllers/application_controller.rb:11:in `new'
+  app/controllers/application_controller.rb:11:in `initialize_wordnik'
+  app/controllers/wordnik_controller.rb:8:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 16:59:40) [GET]
+
+NameError (uninitialized constant ApplicationController::WORDNIK_API_KEY):
+  app/controllers/application_controller.rb:9:in `initialize_wordnik'
+  app/controllers/wordnik_controller.rb:8:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:00:05) [GET]
+{:api_key=>"85b993ddaabe04346e0090d379b02d18ad04bda75d4e0ecca"}
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/wordnik/lookup]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:01:24) [GET]
+
+NoMethodError (private method `gsub' called for nil:NilClass):
+  /usr/local/lib/ruby/1.8/uri/common.rb:289:in `escape'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby/word.rb:26:in `find'
+  app/controllers/wordnik_controller.rb:10:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.9ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:01:37) [POST]
+  Parameters: {"commit"=>"Search", "authenticity_token"=>"cBfkDEyNvfmH74Jnvi6QY85dNX8dspMSsDV9R5P71TA=", "word_search"=>"hello"}
+Completed in 363ms (View: 1, DB: 0) | 200 OK [http://localhost/wordnik/lookup]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:02:16) [GET]
+
+NoMethodError (private method `gsub' called for nil:NilClass):
+  /usr/local/lib/ruby/1.8/uri/common.rb:289:in `escape'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby/word.rb:26:in `find'
+  app/controllers/wordnik_controller.rb:10:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:02:22) [POST]
+  Parameters: {"commit"=>"Search", "authenticity_token"=>"cBfkDEyNvfmH74Jnvi6QY85dNX8dspMSsDV9R5P71TA=", "word_search"=>"hello"}
+Completed in 366ms (View: 1, DB: 0) | 200 OK [http://localhost/wordnik/lookup]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:08:10) [POST]
+  Parameters: {"commit"=>"Search", "authenticity_token"=>"cBfkDEyNvfmH74Jnvi6QY85dNX8dspMSsDV9R5P71TA=", "word_search"=>"hello"}
+Completed in 326ms (View: 9, DB: 0) | 200 OK [http://localhost/wordnik/lookup]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:08:18) [GET]
+
+NoMethodError (private method `gsub' called for nil:NilClass):
+  /usr/local/lib/ruby/1.8/uri/common.rb:289:in `escape'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby/word.rb:26:in `find'
+  app/controllers/wordnik_controller.rb:10:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.2ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:08:25) [GET]
+  Parameters: {"word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 415ms (View: 9, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:09:59) [GET]
+  Parameters: {"word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1313ms (View: 9, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:10:33) [GET]
+  Parameters: {"word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 383ms (View: 14, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:10:46) [GET]
+  Parameters: {"word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 919ms (View: 10, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 17:12:48) [GET]
+Rendering wordnik/index
+Completed in 50ms (View: 42, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:12:50) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1385ms (View: 2, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 17:23:02) [GET]
+Rendering wordnik/index
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:23:06) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 463ms (View: 2, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:27:01) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1115ms (View: 18, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:28:29) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1150ms (View: 16, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:28:44) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1505ms (View: 15, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:29:03) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 577ms (View: 10, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:47:26) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+ERROR: compiling _run_erb_app47views47wordnik47lookup46html46erb RAISED compile error
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/wordnik/lookup.html.erb:44: syntax error, unexpected tFID, expecting kTHEN or ':' or '\n' or ';'
+;  unless phrase['gram1']blank? 
+                               ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/wordnik/lookup.html.erb:54: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47wordnik47lookup46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div>\n  <h1>Definitions of <em>"
+; @output_buffer.concat(( @wordstring ).to_s); @output_buffer.concat "</em></h1>\n  "
+;  if @definitions.blank? ; @output_buffer.concat "\n    <em>Sorry, we couldn't find any definitions!</em>\n  "
+
+;  else ; @output_buffer.concat "\n    <ul>\n      "
+
+;  @definitions.each do |definition| ; @output_buffer.concat "\n        "
+;  unless definition.text.blank? 
+@output_buffer.concat "          <li>"; @output_buffer.concat(( definition.text ).to_s); @output_buffer.concat "</li>\n        "
+;  end ; @output_buffer.concat "\n      "
+;  end ; @output_buffer.concat "\n    </ul>\n  "
+
+;  end ; @output_buffer.concat "\n</div>\n\n<div>\n  <h1>Examples of <em>"
+
+
+
+; @output_buffer.concat(( @wordstring ).to_s); @output_buffer.concat "</em></h1>\n  "
+;  if @examples.blank? ; @output_buffer.concat "\n    <em>Sorry, we couldn't find any examples!</em>\n  "
+
+;  else ; @output_buffer.concat "\n    <ul>\n      "
+
+;  @examples.each do |example| ; @output_buffer.concat "\n        "
+;  unless example.display.blank? 
+@output_buffer.concat "          <li>\n            "
+; @output_buffer.concat(( example.display ).to_s)
+@output_buffer.concat "            ";  unless example.title.blank? ; @output_buffer.concat "\n              <br />\n              - <em>"
+
+; @output_buffer.concat(( example.title ).to_s); @output_buffer.concat "</em>\n            "
+;  end ; @output_buffer.concat "\n          </li>\n        "
+
+;  end ; @output_buffer.concat "\n      "
+;  end ; @output_buffer.concat "\n    </ul>\n  "
+
+;  end ; @output_buffer.concat "\n</div>\n\n<div>\n  <h1>Phrases containing <em>"
+
+
+
+; @output_buffer.concat(( @wordstring ).to_s); @output_buffer.concat "</em></h1>\n  "
+;  if @phrases.blank? ; @output_buffer.concat "\n    <em>Sorry, we couldn't find any phrases!</em>\n  "
+
+;  else ; @output_buffer.concat "\n    <ul>\n      "
+
+;  @phrases.each do |phrase| ; @output_buffer.concat "\n        "
+;  unless phrase['gram1']blank? 
+@output_buffer.concat "          <li>\n            "
+; @output_buffer.concat(( phrase['gram1'] ).to_s); @output_buffer.concat " "; @output_buffer.concat(( phrase['gram2'] ).to_s); @output_buffer.concat "\n          </li>\n        "
+
+;  end ; @output_buffer.concat "\n      "
+;  end ; @output_buffer.concat "\n    </ul>\n  "
+
+;  end ; @output_buffer.concat "\n</div>\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/altay/code/wordnik/sdk/hello_dictionary/app/views/wordnik/lookup.html.erb:54:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/wordnik/lookup.html.erb:44: syntax error, unexpected tFID, expecting kTHEN or ':' or '\n' or ';'
+;  unless phrase['gram1']blank? 
+                               ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/wordnik/lookup.html.erb:54: syntax error, unexpected kENSURE, expecting $end) on line #44 of app/views/wordnik/lookup.html.erb:
+41:   <% else %>
+42:     <ul>
+43:       <% @phrases.each do |phrase| %>
+44:         <% unless phrase['gram1']blank? -%>
+45:           <li>
+46:             <%= phrase['gram1'] -%> <%= phrase['gram2'] %>
+47:           </li>
+
+    app/views/wordnik/lookup.html.erb:54:in `compile!'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:47:34) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 709ms (View: 16, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 17:49:17) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 786ms (View: 19, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:01:18) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 928ms (View: 16, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:01:40) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 972ms (View: 19, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:03:15) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1440ms (View: 24, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:03:40) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 861ms (View: 25, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:03:43) [GET]
+  Parameters: {"word_search"=>"blind cat"}
+Rendering wordnik/lookup
+Completed in 1817ms (View: 3, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=blind%20cat]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:03:55) [GET]
+  Parameters: {"word_search"=>"catting"}
+Rendering wordnik/lookup
+Completed in 2325ms (View: 6, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=catting]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:04:16) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1832ms (View: 77, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:04:31) [GET]
+  Parameters: {"word_search"=>"blind cat"}
+Rendering wordnik/lookup
+Completed in 1782ms (View: 3, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=blind%20cat]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:07:42) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 953ms (View: 36, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:08:30) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 2124ms (View: 118, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:08:37) [GET]
+  Parameters: {"word_search"=>"blind%20cat"}
+Rendering wordnik/lookup
+Completed in 823ms (View: 2, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=blind%2520cat]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:09:03) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 1910ms (View: 68, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:09:14) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering wordnik/lookup
+Completed in 969ms (View: 114, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-21 18:09:21) [GET]
+  Parameters: {"word_search"=>"cat o' nine tails"}
+Rendering wordnik/lookup
+Completed in 873ms (View: 13, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat+o%27+nine+tails]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 18:25:51) [GET]
+Rendering wordnik/index
+Completed in 430ms (View: 19, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 18:26:08) [GET]
+Rendering wordnik/index
+Completed in 412ms (View: 8, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 18:26:48) [GET]
+Rendering wordnik/index
+Completed in 192ms (View: 12, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 18:27:05) [GET]
+Rendering wordnik/index
+Completed in 186ms (View: 11, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 18:27:17) [GET]
+Rendering wordnik/index
+Completed in 197ms (View: 12, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-21 18:28:34) [GET]
+Rendering wordnik/index
+Completed in 207ms (View: 18, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:08:16) [GET]
+Rendering wordnik/index
+Completed in 1440ms (View: 630, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:09:17) [GET]
+Rendering wordnik/index
+Completed in 453ms (View: 105, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:10:20) [GET]
+Rendering wordnik/index
+Completed in 483ms (View: 139, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:10:23) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+
+ApiNotFoundError (invalid resource):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:145:in `handle_errors'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:120:in `get'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby/word.rb:26:in `find'
+  app/controllers/wordnik_controller.rb:13:in `lookup'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (1149.4ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:12:06) [GET]
+Rendering wordnik/index
+Completed in 5698ms (View: 12, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-23 11:14:50) [GET]
+
+SyntaxError (/Users/altay/code/wordnik/sdk/hello_dictionary/app/controllers/wordnik_controller.rb:17: syntax error, unexpected kEND, expecting ')'
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/controllers/wordnik_controller.rb:24: syntax error, unexpected $end, expecting kEND):
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:15:00) [GET]
+Rendering wordnik/index
+Completed in 1119ms (View: 17, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:15:06) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering wordnik/lookup
+Completed in 2527ms (View: 3, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:15:44) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering wordnik/lookup
+Completed in 2719ms (View: 4, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:17:07) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #6 of app/views/layouts/application.html.erb:
+3:   <body>
+4: <div>
+5:   <h1>Hello, Dictionary!</h3>
+6:   <h2>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], lookup_url(:word_search=>@wotd['wordstring'])) %></strong>!
+7:   </h2>
+8:   <p>
+9:     <% form_tag('/wordnik/lookup', :method=>'get') do -%>
+
+    app/views/layouts/application.html.erb:6
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:18:01) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2158ms (View: 8, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:20:36) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 5049ms (View: 20, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:23:17) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2102ms (View: 6, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I'm+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:23:38) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 1765ms (View: 18, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I'm+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:24:08) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2915ms (View: 80, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I'm+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:24:17) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 1988ms (View: 49, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=quipu]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:26:08) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 344ms (View: 25, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:28:27) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1132ms (View: 23, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:28:47) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 553ms (View: 16, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:29:07) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 715ms (View: 19, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:29:15) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1347ms (View: 17, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:29:34) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 379ms (View: 7, DB: 0) | 200 OK [http://localhost/wordnik]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:30:21) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 480ms (View: 22, DB: 0) | 200 OK [http://localhost/wordnik]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:30:51) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 480ms (View: 6, DB: 0) | 200 OK [http://localhost/wordnik]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:30:54) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2806ms (View: 13, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:31:08) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 6104ms (View: 11, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:31:24) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"hello"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 6220ms (View: 30, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=hello&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:32:14) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"hello"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2468ms (View: 36, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=hello&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:32:21) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"cat"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 3217ms (View: 66, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=cat&commit=Search]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:32:26) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 3119ms (View: 8, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:32:32) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 3342ms (View: 14, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=quipu]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:32:54) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2603ms (View: 21, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=quipu]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:33:27) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 2262ms (View: 27, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=quipu]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:33:35) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+Completed in 3042ms (View: 22, DB: 0) | 200 OK [http://localhost/wordnik/lookup?word_search=quipu]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:39:04) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 2307ms (View: 24, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:39:15) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #8 of app/views/layouts/application.html.erb:
+5:   <body>
+6: <div>
+7:   <h1>Hello, Dictionary!</h3>
+8:   <h3>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], lookup_url(:word_search=>@wotd['wordstring'])) %></strong>!
+9:   </h3>
+10:   <p>
+11:     <% form_tag('/wordnik/lookup', :method=>'get') do -%>
+
+    app/views/layouts/application.html.erb:8
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (65.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:39:58) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #8 of app/views/layouts/application.html.erb:
+5:   <body>
+6: <div>
+7:   <h1>Hello, Dictionary!</h3>
+8:   <h3>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], lookup_url(:word_search=>@wotd['wordstring'])) %></strong>!
+9:   </h3>
+10:   <p>
+11:     <% form_tag('/wordnik/lookup', :method=>'get') do -%>
+
+    app/views/layouts/application.html.erb:8
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.5ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:40:00) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #8 of app/views/layouts/application.html.erb:
+5:   <body>
+6: <div>
+7:   <h1>Hello, Dictionary!</h3>
+8:   <h3>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], lookup_url(:word_search=>@wotd['wordstring'])) %></strong>!
+9:   </h3>
+10:   <p>
+11:     <% form_tag('/wordnik/lookup', :method=>'get') do -%>
+
+    app/views/layouts/application.html.erb:8
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (167.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#lookup (for 127.0.0.1 at 2010-06-23 11:40:27) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/lookup
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #8 of app/views/layouts/application.html.erb:
+5:   <body>
+6: <div>
+7:   <h1>Hello, Dictionary!</h3>
+8:   <h3>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], lookup_url(:word_search=>@wotd['wordstring'])) %></strong>!
+9:   </h3>
+10:   <p>
+11:     <% form_tag('/wordnik/lookup', :method=>'get') do -%>
+
+    app/views/layouts/application.html.erb:8
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.2ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:40:56) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 408ms (View: 68, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:40:59) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1890ms (View: 12, DB: 0) | 200 OK [http://localhost/wordnik/?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:41:12) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1622ms (View: 19, DB: 0) | 200 OK [http://localhost/wordnik/]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:41:16) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1841ms (View: 11, DB: 0) | 200 OK [http://localhost/wordnik?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 11:41:25) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 3029ms (View: 38, DB: 0) | 200 OK [http://localhost/wordnik?word_search=go&commit=Search]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:12:51) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+
+ApiNotFoundError (unauthorized):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:145:in `handle_errors'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:120:in `get'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:71:in `word_of_the_day'
+  app/controllers/application_controller.rb:8:in `initialize_wordnik'
+  app/controllers/wordnik_controller.rb:7:in `index'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.4ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:13:19) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+
+ApiNotFoundError (unauthorized):
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:145:in `handle_errors'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:120:in `get'
+  /usr/local/lib/ruby/gems/1.8/gems/wordnik-ruby-0.3.1/lib/wordnik-ruby.rb:71:in `word_of_the_day'
+  app/controllers/application_controller.rb:8:in `initialize_wordnik'
+  app/controllers/wordnik_controller.rb:7:in `index'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (106.8ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:13:44) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+Rendering template within layouts/application
+Rendering wordnik/index
+
+ActionView::TemplateError (undefined method `lookup_url' for #<ActionView::Base:0x244e31c>) on line #71 of app/views/wordnik/index.html.erb:
+68:         <% @phrases.each do |phrase| %>
+69:           <% unless phrase['gram1'].blank? -%>
+70:             <% complete_phrase = "#{phrase['gram1']} #{phrase['gram2']}" %>
+71:             <li><%= link_to(complete_phrase, lookup_url(:word_search=>complete_phrase)) %></li>
+72:           <% end %>
+73:         <% end %>
+74:       </ul>
+
+    app/views/wordnik/index.html.erb:71
+    httparty (0.5.0) lib/httparty/response.rb:15:in `each'
+    httparty (0.5.0) lib/httparty/response.rb:15:in `send'
+    httparty (0.5.0) lib/httparty/response.rb:15:in `method_missing'
+    app/views/wordnik/index.html.erb:68
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.6ms)
+Rendered rescues/_request_and_response (2.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:14:23) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+Rendering template within layouts/application
+Rendering wordnik/index
+
+ActionView::TemplateError (undefined method `lookup_url' for #<ActionView::Base:0x243df6c>) on line #71 of app/views/wordnik/index.html.erb:
+68:         <% @phrases.each do |phrase| %>
+69:           <% unless phrase['gram1'].blank? -%>
+70:             <% complete_phrase = "#{phrase['gram1']} #{phrase['gram2']}" %>
+71:             <li><%= link_to(complete_phrase, lookup_url(:word_search=>complete_phrase)) %></li>
+72:           <% end %>
+73:         <% end %>
+74:       </ul>
+
+    app/views/wordnik/index.html.erb:71
+    httparty (0.5.0) lib/httparty/response.rb:15:in `each'
+    httparty (0.5.0) lib/httparty/response.rb:15:in `send'
+    httparty (0.5.0) lib/httparty/response.rb:15:in `method_missing'
+    app/views/wordnik/index.html.erb:68
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:14:38) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1041ms (View: 28, DB: 0) | 200 OK [http://localhost/wordnik?word_search=go&commit=Search]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:14:45) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 202ms (View: 5, DB: 0) | 200 OK [http://localhost/wordnik]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:16:53) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:8: unknown regexp option - h
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:8: syntax error, unexpected tINTEGER, expecting ')'
+...fer.concat "</strong>!\n  </h3>\n  <p>\n    "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:8: syntax error, unexpected $undefined
+...t "</strong>!\n  </h3>\n  <p>\n    "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:12: syntax error, unexpected tCONSTANT, expecting ')'
+@output_buffer.concat "      Look up a word: \n      "
+                                 ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:12: syntax error, unexpected ':', expecting ')'
+@output_buffer.concat "      Look up a word: \n      "
+                                            ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n      "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:14: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n      "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( submit_tag("I'm Feeling Wordie") ).to_s); @...
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15: unterminated string meets end of file
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n  <head>\n    <title>Hello, Dictionary!</title>\n  </head>\n  <body>\n<div>\n  <h1>Hello, Dictionary!</h3>\n  <h3>The Wordnik Word of the Day for "
+
+
+
+
+
+
+; @output_buffer.concat(( Time.now.strftime("%A, %B %d, %Y") ).to_s); @output_buffer.concat " is... <strong>"; @output_buffer.concat(( link_to(@wotd['wordstring'], "/wordnik?word_search=#{@wotd['wordstring']}) ).to_s); @output_buffer.concat "</strong>!\n  </h3>\n  <p>\n    "
+
+
+;  form_tag('/wordnik', :method=>'get') do 
+@output_buffer.concat "      Look up a word: \n      "
+; @output_buffer.concat(( text_field_tag('word_search') ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( submit_tag('Search') ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( submit_tag("I'm Feeling Wordie") ).to_s); @output_buffer.concat "\n    "
+;  end ; @output_buffer.concat "\n  </p>\n</div>\n"
+
+
+; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n<hr />\n<div>\n  <p>Hello Dictionary was built with the "
+
+
+; @output_buffer.concat(( link_to("Wordnik API", "http://wordnik.com/developers") ).to_s); @output_buffer.concat ".</p>\n  <p><strong>Documentation</strong>: "
+; @output_buffer.concat(( link_to("http://docs.wordnik.com/api/methods", "http://docs.wordnik.com/api/methods") ).to_s); @output_buffer.concat "</p>\n  <p><strong>API Key Signup</strong>: "
+; @output_buffer.concat(( link_to("http://api.wordnik.com/signup/", "http://api.wordnik.com/signup/") ).to_s); @output_buffer.concat "</p>\n  <p><strong>Support</strong>: "
+; @output_buffer.concat(( link_to("http://groups.google.com/group/wordnik-api", "http://groups.google.com/group/wordnik-api") ).to_s); @output_buffer.concat "</p>\n  </body>\n</html>\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15:in `compile!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/Users/altay/.gem/ruby/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:8: unknown regexp option - h
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:8: syntax error, unexpected tINTEGER, expecting ')'
+...fer.concat "</strong>!\n  </h3>\n  <p>\n    "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:8: syntax error, unexpected $undefined
+...t "</strong>!\n  </h3>\n  <p>\n    "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:12: syntax error, unexpected tCONSTANT, expecting ')'
+@output_buffer.concat "      Look up a word: \n      "
+                                 ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:12: syntax error, unexpected ':', expecting ')'
+@output_buffer.concat "      Look up a word: \n      "
+                                            ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:13: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n      "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:14: syntax error, unexpected $undefined, expecting ')'
+...o_s); @output_buffer.concat "\n      "
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.concat(( submit_tag("I'm Feeling Wordie") ).to_s); @...
+                              ^
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15: unterminated string meets end of file
+/Users/altay/code/wordnik/sdk/hello_dictionary/app/views/layouts/application.html.erb:15: syntax error, unexpected $end, expecting ')') on line #8 of app/views/layouts/application.html.erb:
+5:   <body>
+6: <div>
+7:   <h1>Hello, Dictionary!</h3>
+8:   <h3>The Wordnik Word of the Day for <%= Time.now.strftime("%A, %B %d, %Y") %> is... <strong><%= link_to(@wotd['wordstring'], "/wordnik?word_search=#{@wotd['wordstring']}) %></strong>!
+9:   </h3>
+10:   <p>
+11:     <% form_tag('/wordnik', :method=>'get') do -%>
+
+    app/views/layouts/application.html.erb:15:in `compile!'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:17:31) [GET]
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 210ms (View: 19, DB: 0) | 200 OK [http://localhost/wordnik]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:17:33) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 187ms (View: 8, DB: 0) | 200 OK [http://localhost/wordnik?word_search=quipu]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:17:38) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 192ms (View: 8, DB: 0) | 200 OK [http://localhost/wordnik?word_search=quipu]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:17:40) [GET]
+  Parameters: {"commit"=>"Search", "word_search"=>"go"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1082ms (View: 16, DB: 0) | 200 OK [http://localhost/wordnik?word_search=go&commit=Search]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:17:49) [GET]
+  Parameters: {"word_search"=>"to go hard with"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 189ms (View: 6, DB: 0) | 200 OK [http://localhost/wordnik?word_search=to%20go%20hard%20with]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:18:30) [GET]
+  Parameters: {"word_search"=>"to go hard with"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1046ms (View: 10, DB: 0) | 200 OK [http://localhost/wordnik?word_search=to%20go%20hard%20with]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:18:33) [GET]
+  Parameters: {"word_search"=>"quipu"}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1105ms (View: 11, DB: 0) | 200 OK [http://localhost/wordnik?word_search=quipu]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:18:48) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1124ms (View: 10, DB: 0) | 200 OK [http://localhost/wordnik?word_search=&commit=I%27m+Feeling+Wordie]
+
+
+Processing WordnikController#index (for 127.0.0.1 at 2010-06-23 13:18:53) [GET]
+  Parameters: {"commit"=>"I'm Feeling Wordie", "word_search"=>""}
+Rendering template within layouts/application
+Rendering wordnik/index
+Completed in 1135ms (View: 11, DB: 0) | 200 OK [http://localhost/wordnik?word_search=&commit=I%27m+Feeling+Wordie]
