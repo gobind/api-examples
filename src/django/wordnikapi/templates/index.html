@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Hello, Dictionary!</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello, Dictionary!</h3>
+      <h3>The Wordnik Word of the Day for {{date|date:"l M d, Y"}} is... <strong><a href="/wordnik?word_search={{wotd|urlencode}}">{{wotd}}</a></strong>!
+      </h3>
+      <p>
+        <form method='get' action='/wordnik'>
+          Look up a word: 
+          <input type='text' name='word_search' />
+          <input type='submit' name='commit' value='Search' />
+          <input type='submit' name='commit' value="I'm Feeling Wordie" />
+        </form>
+      </p>
+    </div>
+{% if wordstring %}
+  <hr />
+  <div>
+    <h2>Definitions of <em>{{wordstring}}</em></h2>
+    {% if not definitions %}
+      <em>Sorry, we couldn't find any definitions!</em>
+    {% else %}
+      <ul>
+        {% for definition in definitions %}
+          {% if definition.text %}
+            <li>{{definition.text}}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <a href="http://wordnik.com/words/{{wordstring}}">more definitions</a>
+    {% endif %}
+  </div>
+
+  <div>
+    <h2>Examples of <em>{{wordstring}}</em></h2>
+    {% if not examples %}
+      <em>Sorry, we couldn't find any examples!</em>
+    {% else %}
+      <ul>
+        {% for example in examples %}
+          {% if example.display %}
+            <li>
+              {{example.display}}
+              {% if example.title %} 
+                <br />
+                - <em>{{example.title}}</em>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <a href="http://wordnik.com/words/{{wordstring}}">more examples</a>
+    {% endif %}
+  </div>
+
+  <div>
+    <h2>Words related to <em>{{wordstring}}</em></h2>
+    {% if not related %}
+      <em>Sorry, we couldn't find any related words!</em>
+    {% else %}
+      {% for rel_type, rel_words in related.items %}
+        {% if rel_words %}
+          <h3>{{rel_type}}</h3>
+          <ul>
+            <!-- only display the first 5 related words in each category -->
+            {% for r in rel_words %}
+              <li><a href="/wordnik?word_search={{r|urlencode}}">{{r}}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+      <a href="http://wordnik.com/words/{{wordstring|urlencode}}">more examples</a>
+    {% endif %}
+  </div>
+
+  <div>
+    <h2>Phrases containing <em>{{wordstring}}</em></h2>
+    {% if not phrases %}
+      <em>Sorry, we couldn't find any phrases!</em>
+    {% else %}
+      <ul>
+        {% for phrase in phrases %}
+          <li><a href="/wordnik?word_search={{phrase|urlencode}}">{{phrase}}</a></li>
+        {% endfor %}
+      </ul>
+      <a href="http://wordnik.com/words/{{wordstring|urlencode}}">more phrases</a>
+    {% endif %}
+  </div>
+{% endif %}
+    <hr />
+    <div>
+      <p>Hello Dictionary was built with the <a href="http://wordnik.com/developers">Wordnik API</a>.</p>
+      <p><strong>Documentation</strong>: <a href="http://docs.wordnik.com/api/methods">http://docs.wordnik.com/api/methods</a></p>
+      <p><strong>API Key Signup</strong>: <a href="http://api.wordnik.com/signup/">http://api.wordnik.com/signup</a></p>
+      <p><strong>Support</strong>: <a href="http://groups.google.com/group/wordnik-api">http://groups.google.com/group/wordnik-api</a></p>
+    </div>
+  </body>
+</html>
